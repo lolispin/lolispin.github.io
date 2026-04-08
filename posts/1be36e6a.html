@@ -19,15 +19,15 @@
   <meta name="author" content="lolispin">
   <meta name="keywords" content="">
   
-    <meta name="description" content="4号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。">
+    <meta name="description" content="4 号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。 数据迁移 先是把一些文件通过 U 盘传输过来了，包括 pdf、tex 以及一些材料文件。此外，又把几个软件都下载了，matlab、vscode、texlive 这些。接着就是博客的问题了。好在现在有 AI 的帮助，一步步跟着操作。 旧电脑的利用 本来打算让旧电脑一直运行 mma 的脚本，试图找出一些公式。不">
 <meta property="og:type" content="article">
 <meta property="og:title" content="新电脑的数据迁移">
 <meta property="og:url" content="https://lolispin.github.io/posts/1be36e6a.html">
 <meta property="og:site_name" content="lolispin">
-<meta property="og:description" content="4号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。">
+<meta property="og:description" content="4 号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。 数据迁移 先是把一些文件通过 U 盘传输过来了，包括 pdf、tex 以及一些材料文件。此外，又把几个软件都下载了，matlab、vscode、texlive 这些。接着就是博客的问题了。好在现在有 AI 的帮助，一步步跟着操作。 旧电脑的利用 本来打算让旧电脑一直运行 mma 的脚本，试图找出一些公式。不">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-04-06T03:15:43.000Z">
-<meta property="article:modified_time" content="2026-04-06T03:17:08.643Z">
+<meta property="article:modified_time" content="2026-04-06T11:08:03.888Z">
 <meta property="article:author" content="lolispin">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -224,7 +224,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          40 字
+          562 字
         
       </span>
     
@@ -235,7 +235,7 @@
         
         
         
-          1 分钟
+          5 分钟
         
       </span>
     
@@ -277,7 +277,17 @@
             
               <div class="markdown-body">
                 
-                <p>4号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。</p>
+                <p>4 号新电脑就到了，不过放假期间一直有事情，故而直到今天才刚刚把博客移植过来。先试试效果。</p>
+<h2 id="数据迁移">数据迁移</h2>
+<p>先是把一些文件通过 U 盘传输过来了，包括 pdf、tex 以及一些材料文件。此外，又把几个软件都下载了，matlab、vscode、texlive 这些。接着就是博客的问题了。好在现在有 AI 的帮助，一步步跟着操作。</p>
+<h2 id="旧电脑的利用">旧电脑的利用</h2>
+<p>本来打算让旧电脑一直运行 mma 的脚本，试图找出一些公式。不过让 AI 写了几个脚本，原理为先进行数值验证，如果等式两边差值在 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mo>−</mo><mn>300</mn></mrow></msup></mrow><annotation encoding="application/x-tex">10^{-300}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8141em;"></span><span class="mord">1</span><span class="mord"><span class="mord">0</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">−</span><span class="mord mtight">300</span></span></span></span></span></span></span></span></span></span></span></span> 以内，那么就进入符号计算的环节。如果符号计算也成功了，便会记录在一个 tex 文件中。然而，这种做法需要先指定计算的类型，譬如给定被积函数的形式，往其中增添一些可以变动的参数，再加入一个常数库。利用 PSLQ 算法，找寻他们之间存在的线性组合关系。然而效率很低，常常几百个参数验算完一个都没有，或者仅仅有十分平凡的公式。所以我决定利用旧电脑来修复图片和视频。在网上找到了一个网友分享的工具，一百来 Mb，运行起来温度比较高，看看换个硅脂会不会好一些。修复图片还行，但是修复视频太慢了，以及太占用硬盘。一个 30 分钟 25 帧 134 Mb 的视频，切割成了 50000 张图片，再对图片进行修复，随后将图片合称为视频。刚刚有几次都失败了，提示说超过数组，难道是因为切出的图片太多了。不过多试了几次，似乎又成功了。遇到了如下的问题：</p>
+<ul>
+<li>有的修复的视频会比原视频多一两分钟，当然这是相对于30分钟的视频来说的。</li>
+<li>修复视频把字幕去除了</li>
+<li>即使时间上完全对的上，但是修复后出现了轻微的音画不同步现象<br>
+总之先看看能不能解决。</li>
+</ul>
 
                 
               </div>
@@ -339,6 +349,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/posts/b44f8d88.html" title="Cholesky分解">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">Cholesky分解</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
