@@ -261,7 +261,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/02/c9eb4a41.html" target="_blank">
         <div>
-          1. 问题 对于 nnn 元线性方程组 {a11x1+a12x2+⋯+a1nxn=b1a21x1+a22x2+⋯+a2nxn=b2⋯⋯⋯⋯⋯⋯⋯⋯an1x1+an2x2+⋯+annxn=bn\begin{cases} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 + \cdots + a_{2n}
+          1. 问题 对于 n 元线性方程组 ⎩⎨⎧​a11​x1​+a12​x2​+⋯+a1n​xn​=b1​a21​x1​+a22​x2​+⋯+a2n​xn​=b2​⋯⋯⋯⋯⋯⋯⋯⋯an1​x1​+an2​x2​+⋯+ann​xn​=bn​​ 如果采用克莱姆法则（Cramer’s Rule）处理，那么需要计算行列式。MATLAB 通过 LU 分解的方法来处理，饶是如此，其浮点计算次数 ∼2n3/3。如果
         </div>
       </a>
 
@@ -301,7 +301,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/02/7b840b49.html" target="_blank">
         <div>
-          1. 数学理论 我们将具有 mmm 个方程和 nnn 个未知数的线性方程组表示为： {a11x1+a12x2+⋯+a1nxn=b1a21x1+a22x2+⋯+a2nxn=b2⋮am1x1+am2x2+⋯+amnxn=bm\begin{cases} a_{11}x_1 + a_{12}x_2 + \cdots + a_{1n}x_n = b_1 \\ a_{21}x_1 + a_{22}x_2 +
+          1. 数学理论 我们将具有 m 个方程和 n 个未知数的线性方程组表示为： ⎩⎨⎧​a11​x1​+a12​x2​+⋯+a1n​xn​=b1​a21​x1​+a22​x2​+⋯+a2n​xn​=b2​⋮am1​x1​+am2​x2​+⋯+amn​xn​=bm​​ 其中：  x1​,x2​,…,xn​ 是 n 个未知数。 aij​ 是系数，组成系数矩阵 A（m×n 阶）。 b1​,b2​,…,bm​
         </div>
       </a>
 
@@ -341,7 +341,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/01/1e48f5fd.html" target="_blank">
         <div>
-          Adams 法 1. 数学原理 考虑一阶常微分方程的初值问题： dydt=f(t,y),y(tn)=yn\frac{\mathrm{d}y}{\mathrm{d}t} = f(t, y), \quad y(t_n) = y_n dtdy​=f(t,y),y(tn​)=yn​ 根据微积分基本定理，我们可以将微分方程转化为在区间 [tn,tn+1][t_n, t_{n+1}][tn​,tn+1​] 上
+          Adams 法 1. 数学原理 考虑一阶常微分方程的初值问题： dtdy​=f(t,y),y(tn​)=yn​ 根据微积分基本定理，我们可以将微分方程转化为在区间 [tn​,tn+1​] 上的积分方程： y(tn+1​)=y(tn​)+∫tn​tn+1​​f(t,y(t))dt 这个公式是绝对精确的。数值求解的核心挑战在于：我们不知道被积函数 f(t,y(t)) 在整个区间内的连续表达式。Adam
         </div>
       </a>
 
@@ -381,7 +381,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/30/a24041b7.html" target="_blank">
         <div>
-          RK4 1. 数学原理 根据泰勒级数，如果我们想要更高精度的近似（例如四阶精度 O(h4)O(h^4)O(h4)），数学上需要计算 yyy 的高阶导数：y′′, y′′′, y′′′′y&#x27;&#x27;, \, y&#x27;&#x27;&#x27;, \, y&#x27;&#x27;&#x27;&#x27;y′′,y′′′,y′′′′。 但在实际应用中，显式地对 f(t,y)f(t, y
+          RK4 1. 数学原理 根据泰勒级数，如果我们想要更高精度的近似（例如四阶精度 O(h4)），数学上需要计算 y 的高阶导数：y′′,y′′′,y′′′′。 但在实际应用中，显式地对 f(t,y) 求导是非常困难甚至不可能的。 Runge-Kutta 仅通过在区间 [tn​,tn+1​] 内不同位置对斜率 f(t,y) 进行若干次采样，并巧妙地组合这些斜率，就能抵消泰勒级数中的低阶误差项，从而达到
         </div>
       </a>
 
@@ -421,7 +421,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/29/79e9a9b1.html" target="_blank">
         <div>
-          Heun 法  1. 数学原理 我们依然面对初值问题：dydt=f(t,y)\frac{\mathrm{d}y}{\mathrm{d}t} = f(t, y)dtdy​=f(t,y)，已知 y(t0)=y0y(t_0) = y_0y(t0​)=y0​。  基础 Euler 法的缺陷：它假设在整个步长 hhh 内，斜率始终等于区间的起点斜率。这相当于用一个矩形去近似积分，忽略了曲线在区间内的弯曲，因
+          Heun 法  1. 数学原理 我们依然面对初值问题：dtdy​=f(t,y)，已知 y(t0​)=y0​。  基础 Euler 法的缺陷：它假设在整个步长 h 内，斜率始终等于区间的起点斜率。这相当于用一个矩形去近似积分，忽略了曲线在区间内的弯曲，因此误差较大（一阶精度）。 改进的直觉：既然起点斜率（显式）和终点斜率（隐式）各有偏颇，那么如果我们取这两个斜率的平均值作为这段区间的代表斜率，结果一
         </div>
       </a>
 
@@ -461,7 +461,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/29/43515f59.html" target="_blank">
         <div>
-          欧拉法  1. 数学原理 1. 显式 Euler 法 我们要解的一阶常微分方程初值问题（IVP）通常形式如下： dydt=f(t,y),y(t0)=y0\frac{\mathrm{d}y}{\mathrm{d}t} = f(t, y), \quad y(t_0) = y_0 dtdy​=f(t,y),y(t0​)=y0​  其中 f(t,y)f(t, y)f(t,y) 是已知的函数，表示曲线在点
+          欧拉法  1. 数学原理 1. 显式 Euler 法 我们要解的一阶常微分方程初值问题（IVP）通常形式如下： dtdy​=f(t,y),y(t0​)=y0​  其中 f(t,y) 是已知的函数，表示曲线在点 (t,y) 处的斜率。 y(t0​)=y0​ 是给定的初始条件。 我们的目标是求出在 t1​,t2​,…,tn​ 各个点上 y 的近似值。  可以通过三种方式来理解欧拉法的原理： 1. 几何
         </div>
       </a>
 
@@ -501,7 +501,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/28/b9e6408.html" target="_blank">
         <div>
-          反幂法 1. 数学原理 反幂法建立在矩阵特征值的一个基本定理之上： 定理：如果矩阵 AAA 有特征值 λ\lambdaλ 及其对应的特征向量 vvv，且 AAA 可逆，那么：  A−1A^{-1}A−1 的特征向量仍然是 vvv。 A−1A^{-1}A−1 对应的特征值是 1/λ1/\lambda1/λ。  假设矩阵 AAA 的特征值排列为： ∣λ1∣&gt;∣λ2∣≥⋯&gt;∣λn∣|\lam
+          反幂法 1. 数学原理 反幂法建立在矩阵特征值的一个基本定理之上： 定理：如果矩阵 A 有特征值 λ 及其对应的特征向量 v，且 A 可逆，那么：  A−1 的特征向量仍然是 v。 A−1 对应的特征值是 1/λ。  假设矩阵 A 的特征值排列为： ∣λ1​∣&gt;∣λ2​∣≥⋯&gt;∣λn​∣ 那么，逆矩阵 A−1 的特征值排列就是： ∣1/λn​∣&gt;∣1/λn−1​∣≥⋯&gt;∣1
         </div>
       </a>
 
@@ -541,7 +541,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/28/4f2e09e5.html" target="_blank">
         <div>
-          幂法  1. 数学原理 假设 n×nn \times nn×n 矩阵 AAA 具有 nnn 个线性无关的特征向量 v1, v2, …, vnv_1, \, v_2, \, \dots, \, v_nv1​,v2​,…,vn​，其对应的特征值满足主特征值占优条件： ∣λ1∣&gt;∣λ2∣≥∣λ3∣≥⋯≥∣λn∣|\lambda_1| &gt; |\lambda_2| \geq |\lambda_3
+          幂法  1. 数学原理 假设 n×n 矩阵 A 具有 n 个线性无关的特征向量 v1​,v2​,…,vn​，其对应的特征值满足主特征值占优条件： ∣λ1​∣&gt;∣λ2​∣≥∣λ3​∣≥⋯≥∣λn​∣ 对于任意初始随机向量 x0​，它可以被唯一地表示为这组特征向量的线性组合： x0​=c1​v1​+c2​v2​+c3​v3​+⋯+cn​vn​ （注：由于 x0​ 是随机取的，通常可以保证主成分系
         </div>
       </a>
 
@@ -581,7 +581,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/28/f1e35c46.html" target="_blank">
         <div>
-          差分计算微分  1. 数学原理 基于导数定义 f′(x)=lim⁡h→0f(x+h)−f(x)hf&#x27;(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}f′(x)=limh→0​hf(x+h)−f(x)​，在离散情况下，利用过两点的割线斜率近似代替切线斜率。  前向差分 (Forward Difference)：f′(x)≈f(x+h)−f(x)hf&#x
+          差分计算微分  1. 数学原理 基于导数定义 f′(x)=limh→0​hf(x+h)−f(x)​，在离散情况下，利用过两点的割线斜率近似代替切线斜率。  前向差分 (Forward Difference)：f′(x)≈hf(x+h)−f(x)​  后向差分 (Backward Difference)：f′(x)≈hf(x)−f(x−h)​   后向差分的优势：在实时信号处理或因果系统中，未来时刻
         </div>
       </a>
 
@@ -621,7 +621,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/27/40709840.html" target="_blank">
         <div>
-          Gauss Legendre 积分  1. 数学原理 Newton-Cotes 公式虽然简单，但存在三个致命缺点：  节点僵化：NC 公式要求节点必须是等间距的。这限制了算法的灵活性。 精度瓶颈：如果你固定了 nnn 个点，你最多只能通过调整权重来算准 n−1n-1n−1 次多项式。想要更高精度，你只能拼命增加点数（复化公式），导致计算量巨大。 龙格现象：当 nnn 较大时，等间距插值会出现剧烈的
+          Gauss Legendre 积分  1. 数学原理 Newton-Cotes 公式虽然简单，但存在三个致命缺点：  节点僵化：NC 公式要求节点必须是等间距的。这限制了算法的灵活性。 精度瓶颈：如果你固定了 n 个点，你最多只能通过调整权重来算准 n−1 次多项式。想要更高精度，你只能拼命增加点数（复化公式），导致计算量巨大。 龙格现象：当 n 较大时，等间距插值会出现剧烈的震荡，甚至出现负权重
         </div>
       </a>
 

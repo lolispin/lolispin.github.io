@@ -261,7 +261,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/08/d158e459.html" target="_blank">
         <div>
-          名称由来 说起来奇怪，所谓追赶，指的是先解 Ly=bLy = b Ly=b 再解 LTx=yL^Tx = y LTx=y 如此看来，LU 分解和 Cholesky 分解也能够称为追赶法。不过此处，针对的是系数矩阵为三对角线矩阵的方程 数学原理 对于三对角线矩阵 AAA A=[b1c1a2b2c2a3b3c3⋱⋱⋱anbn]A= \begin{bmatrix} b_1 &amp; c_1 \\ a_
+          名称由来 说起来奇怪，所谓追赶，指的是先解 Ly=b 再解 LTx=y 如此看来，LU 分解和 Cholesky 分解也能够称为追赶法。不过此处，针对的是系数矩阵为三对角线矩阵的方程 数学原理 对于三对角线矩阵 A A=​b1​a2​​c1​b2​a3​​c2​b3​⋱​c3​⋱an​​⋱bn​​​ 分解为 L=​1β2​​1β3​​1⋱​⋱βn​​1​​U=​α1​​c1​α2​​c2​α3​​
         </div>
       </a>
 
@@ -301,7 +301,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/07/b44f8d88.html" target="_blank">
         <div>
-          Cholesky 分解 对于对称正定矩阵，我们有另一种更好的分解方法：Cholesky 分解。  一、 数学原理 将一个对称正定矩阵 AAA 分解为一个下三角矩阵 LLL 及其转置的乘积： A=LLTA = LL^T A=LLT 通过矩阵乘法定义，我们可以推导出 LLL 的每一个元素：  对角线元素 (i=ji = ji=j)：Ljj=ajj−∑k=1j−1Ljk2L_{jj} = \sqrt{a
+          Cholesky 分解 对于对称正定矩阵，我们有另一种更好的分解方法：Cholesky 分解。  一、 数学原理 将一个对称正定矩阵 A 分解为一个下三角矩阵 L 及其转置的乘积： A=LLT 通过矩阵乘法定义，我们可以推导出 L 的每一个元素：  对角线元素 (i=j)：Ljj​=ajj​−k=1∑j−1​Ljk2​​  非对角线元素 (i&gt;j)：Lij​=Ljj​1​(aij​−k=1∑
         </div>
       </a>
 
@@ -374,7 +374,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/03/32cef953.html" target="_blank">
         <div>
-          LU 分解 其实呢，我也不知道为什么要分解这么一下，不过既然有这个算法，想来是有道理的。  一、 数学原理 考虑对矩阵 AAA 分解为 A=LUA = LU A=LU  LLL 为下三角矩阵，对角线全为 1，其余元素存储消元时的“比例因子”。 UUU 为上三角矩阵，即消元最终得到的阶梯阵，与 Gauss 消元法中得到的矩阵相同。 为了保证数值稳定性，需要使对角线上的元素为列主元。也就是说，通常不会
+          LU 分解 其实呢，我也不知道为什么要分解这么一下，不过既然有这个算法，想来是有道理的。  一、 数学原理 考虑对矩阵 A 分解为 A=LU  L 为下三角矩阵，对角线全为 1，其余元素存储消元时的“比例因子”。 U 为上三角矩阵，即消元最终得到的阶梯阵，与 Gauss 消元法中得到的矩阵相同。 为了保证数值稳定性，需要使对角线上的元素为列主元。也就是说，通常不会直接对 A 进行分解，而是先对齐进
         </div>
       </a>
 
@@ -414,7 +414,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/02/e2ef7d39.html" target="_blank">
         <div>
-          上个星期更新 Fibonacci quarterly 还是太快了，几乎没时间去做别的事情。导师一直不管我，感觉未来堪忧啊，不知道做什么，只好去学习 matlab 数值分析。后天新电脑就到了，这是我第二次在网上买电脑。第一次被坑了，时隔四年多，希望这次顺利。 本文中，我们得到了以 Fibonacci 数的幂次为元素的行列式，譬如 ∣Fn3Fn+13Fn+23Fn+33Fn+13Fn+23Fn+33F
+          上个星期更新 Fibonacci quarterly 还是太快了，几乎没时间去做别的事情。导师一直不管我，感觉未来堪忧啊，不知道做什么，只好去学习 matlab 数值分析。后天新电脑就到了，这是我第二次在网上买电脑。第一次被坑了，时隔四年多，希望这次顺利。 本文中，我们得到了以 Fibonacci 数的幂次为元素的行列式，譬如 ​Fn3​Fn+13​Fn+23​Fn+33​​Fn+13​Fn+23
         </div>
       </a>
 
@@ -454,7 +454,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/02/8ba4ab1e.html" target="_blank">
         <div>
-          Gauss 消元法 一、 数学原理与算法流程 Gauss 消元法的核心思想是通过初等行变换将原矩阵转化为上三角矩阵，从而将复杂的方程组简化为可以逐个击破的简单形式。之所以是上三角而非下三角，这与我们消元的顺序有关。 1. 找出主元 在处理第 kkk 列时，如果 A(k,k)A(k,k)A(k,k) 为 000 或极小值，消元公式中的除法会导致计算崩溃或误差剧增。因此，需要通过找出第 kkk列元素中
+          Gauss 消元法 一、 数学原理与算法流程 Gauss 消元法的核心思想是通过初等行变换将原矩阵转化为上三角矩阵，从而将复杂的方程组简化为可以逐个击破的简单形式。之所以是上三角而非下三角，这与我们消元的顺序有关。 1. 找出主元 在处理第 k 列时，如果 A(k,k) 为 0 或极小值，消元公式中的除法会导致计算崩溃或误差剧增。因此，需要通过找出第 k列元素中位于第 k 行下方的，且绝对值最大的
         </div>
       </a>
 
@@ -494,7 +494,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/01/633f2ae9.html" target="_blank">
         <div>
-          SOR (Successive Over-Relaxation) 迭代算法数学原理 1. 算法背景与动机 引入了一个 ω\omegaω，其动机或许与残差有关。  2. 数学推导过程 A. 分量混合逻辑 假设在第 k+1k+1k+1 次迭代中，已经通过标准的 Gauss-Seidel 逻辑计算出了一个临时新值 xˉi(k+1)\bar{x}_i^{(k+1)}xˉi(k+1)​： xˉi(k+1)=
+          SOR (Successive Over-Relaxation) 迭代算法数学原理 1. 算法背景与动机 引入了一个 ω，其动机或许与残差有关。  2. 数学推导过程 A. 分量混合逻辑 假设在第 k+1 次迭代中，已经通过标准的 Gauss-Seidel 逻辑计算出了一个临时新值 xˉi(k+1)​： xˉi(k+1)​=aii​1​(bi​−j&lt;i∑​aij​xj(k+1)​−j&gt;
         </div>
       </a>
 
@@ -534,7 +534,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/03/31/c83cb73.html" target="_blank">
         <div>
-          Gauss-Seidel迭代算法数学原理 今天学习了 GS 迭代算法，原理很简单，但是关于其中前向替换的细节，思考了好久不得其义，询问半天 AI，也未得到想要的答案。在去二教打水时，一阵清风，豁然开朗。 1. 矩阵分解基础 对于线性方程组 Ax=bAx = bAx=b，我们将系数矩阵 AAA 分解为三个部分： A=D+L+UA = D + L + U A=D+L+U 其中：  DDD：主对角阵 (
+          Gauss-Seidel迭代算法数学原理 今天学习了 GS 迭代算法，原理很简单，但是关于其中前向替换的细节，思考了好久不得其义，询问半天 AI，也未得到想要的答案。在去二教打水时，一阵清风，豁然开朗。 1. 矩阵分解基础 对于线性方程组 Ax=b，我们将系数矩阵 A 分解为三个部分： A=D+L+U 其中：  D：主对角阵 (Diagonal) L：严格下三角阵 (Strict Lower Tr
         </div>
       </a>
 
@@ -574,7 +574,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/03/30/b2eed27d.html" target="_blank">
         <div>
-          今天花费了2个小时学习 Jacobi 迭代方法，现在有了 AI 真方便，许多地方可以询问。  一、 Jacobi 迭代法的数学原理 假设我们要解决如下线性方程组： Ax=bAx = b Ax=b 其中 AAA 是一个 n×nn \times nn×n 的方阵。我们将 AAA 分解为三个部分： A=D+L+UA = D + L + U A=D+L+U  DDD：对角矩阵（Diagonal matri
+          今天花费了2个小时学习 Jacobi 迭代方法，现在有了 AI 真方便，许多地方可以询问。  一、 Jacobi 迭代法的数学原理 假设我们要解决如下线性方程组： Ax=b 其中 A 是一个 n×n 的方阵。我们将 A 分解为三个部分： A=D+L+U  D：对角矩阵（Diagonal matrix） L：严格下三角矩阵（Strictly lower triangular matrix） U：严格
         </div>
       </a>
 

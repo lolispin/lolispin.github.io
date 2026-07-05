@@ -261,7 +261,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/16/fce72ee1.html" target="_blank">
         <div>
-          1. 问题 在实际问题中，通常系数矩阵会是对称正定矩阵。对于这种特殊的矩阵，有着特别的方法。  2. 数学原理 先让我们看看什么是正定矩阵吧。方阵 A∈Rn×nA \in \mathbb{R}^{n \times n}A∈Rn×n，其对于任意向量 x∈Rnx \in \mathbb{R}^{n}x∈Rn，都有 xTAx≥0x^T A x \ge 0 xTAx≥0 则称 AAA 为半正定矩阵。若大于
+          1. 问题 在实际问题中，通常系数矩阵会是对称正定矩阵。对于这种特殊的矩阵，有着特别的方法。  2. 数学原理 先让我们看看什么是正定矩阵吧。方阵 A∈Rn×n，其对于任意向量 x∈Rn，都有 xTAx≥0 则称 A 为半正定矩阵。若大于号严格成立，则为正定矩阵。注意，正定矩阵不一定对称。若 A 为对称正定矩阵，那么起将具有如下的性质   A 非奇异，且 A−1 也对称正定   A 的所有特征值都
         </div>
       </a>
 
@@ -301,7 +301,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/14/113c3121.html" target="_blank">
         <div>
-          1. 问题 在前面，我们得到了 Jacobi 迭代、Gauss Seidel 迭代以及 SOR，但是似乎忘记了一件事，这些迭代方法为什么能够得到精确解，或者近似解。当然，主要原因是潘建瑜老师公开的 ppt 顺序是这样的，先介绍方法，再讨论收敛性。不过没关系，我们补充一下。  2. 数学原理 首先，我们定义谱半径 设 A∈Rn×nA \in \mathbb{R}^{n \times n}A∈Rn×n
+          1. 问题 在前面，我们得到了 Jacobi 迭代、Gauss Seidel 迭代以及 SOR，但是似乎忘记了一件事，这些迭代方法为什么能够得到精确解，或者近似解。当然，主要原因是潘建瑜老师公开的 ppt 顺序是这样的，先介绍方法，再讨论收敛性。不过没关系，我们补充一下。  2. 数学原理 首先，我们定义谱半径 设 A∈Rn×n（或 Cn×n），则称 ρ(A)≜λ∈σ(A)max​{∣λ∣} 为
         </div>
       </a>
 
@@ -341,7 +341,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/13/49b7f0ab.html" target="_blank">
         <div>
-          1. 问题 在前面，我们计算了 Gauss Seidel 迭代，它的方法是得到一个新的分量后，立刻使用它，也就是 xi(k+1)=1aii(bi−∑j=1i−1aijxj(k+1)−∑j=i+1naijxj(k))x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij}x_j^{(k + 1)} - \sum_{j=i+
+          1. 问题 在前面，我们计算了 Gauss Seidel 迭代，它的方法是得到一个新的分量后，立刻使用它，也就是 xi(k+1)​=aii​1​(bi​−j=1∑i−1​aij​xj(k+1)​−j=i+1∑n​aij​xj(k)​) 但是有人觉得还是太保守了，于是给出 yi(k+1)​=xi(k)​+ω(xi(k+1)​−xi(k)​) 这里选择 yi(k+1)​ 作为新的迭代解。注意得到的 y
         </div>
       </a>
 
@@ -381,7 +381,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/13/f1fb0398.html" target="_blank">
         <div>
-          1. 问题 在 Jacobi 迭代中，我们获取新的值 x(k+1)x^{(k + 1)}x(k+1) 利用了全部的 x(k)x^{(k)}x(k) 的分量，计算公式为 xi(k+1)=1aii(bi−∑j=1i−1aijxj(k)−∑j=i+1naijxj(k))x_i^{(k+1)} = \frac{1}{a_{ii}} \left( b_i - \sum_{j=1}^{i-1} a_{ij}x
+          1. 问题 在 Jacobi 迭代中，我们获取新的值 x(k+1) 利用了全部的 x(k) 的分量，计算公式为 xi(k+1)​=aii​1​(bi​−j=1∑i−1​aij​xj(k)​−j=i+1∑n​aij​xj(k)​) 然而，如果我们将右侧的分量替换为已经计算出的结果，岂不是更好，也就是 xi(k+1)​=aii​1​(bi​−j=1∑i−1​aij​xj(k+1)​−j=i+1∑n​a
         </div>
       </a>
 
@@ -421,7 +421,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/11/91832f2d.html" target="_blank">
         <div>
-          1. 问题 在前面，我们已经得到了 Gauss 消去法、LU 分解法和 Cholesky 分解法，以及针对三对角矩阵的 Thomas 追赶法。然而，从复杂度上看，前三者都是 O(n3)O(n^3)O(n3) 的。对于大规模线性方程组，特别是稀疏方程组，当前的首选方法是迭代方法。考虑到计算机的浮点数计算，因此不必担心迭代法在精度上比前面精确的方法差。其基本思想为：对于 Ax=b,A∈Rn×n 非奇异
+          1. 问题 在前面，我们已经得到了 Gauss 消去法、LU 分解法和 Cholesky 分解法，以及针对三对角矩阵的 Thomas 追赶法。然而，从复杂度上看，前三者都是 O(n3) 的。对于大规模线性方程组，特别是稀疏方程组，当前的首选方法是迭代方法。考虑到计算机的浮点数计算，因此不必担心迭代法在精度上比前面精确的方法差。其基本思想为：对于 Ax=b,A∈Rn×n 非奇异 给定一个初始值 x(
         </div>
       </a>
 
@@ -461,7 +461,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/11/25b620bc.html" target="_blank">
         <div>
-          1. 问题 先看一个具体的例子：考虑系数矩阵 A=[1111.0001]A = \begin{bmatrix} 1 &amp; 1 \\ 1 &amp; 1.0001 \end{bmatrix} A=[11​11.0001​] 以及常数矩阵 b=[22]b = \begin{bmatrix} 2 \\ 2 \end{bmatrix} b=[22​] 那么方程组 Ax=bAx = b Ax=b ma
+          1. 问题 先看一个具体的例子：考虑系数矩阵 A=[11​11.0001​] 以及常数矩阵 b=[22​] 那么方程组 Ax=b matlab 给出解为 x=[20​] 然而，如果对常数项稍加扰动 b=[22.0001​] 那么解出 x=[11​] 我们称这样的方程组是病态的。一个线性方程组是否病态，通常取决于系数矩阵，因此考虑 设 A 非奇异，∥⋅∥ 是任一算子范数，则称 κ(A)≜∥A−1∥⋅
         </div>
       </a>
 
@@ -501,7 +501,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/08/121cefe0.html" target="_blank">
         <div>
-          好久没有更新了。本文我们将证明如下的公式 F3a=1+∑i=0a−1(2i+a−13i)(−1)a−i−18iF3a+1=1+2∑i=0a−1(2i+a3i+1)(−1)a−i−18iF3a+2=1+4∑i=0a−1(2i+a+13i+2)(−1)a−i−18iF_{3a} = 1 + \sum_{i=0}^{a - 1} \binom{2i + a - 1}{3i} (-1)^{a - i -
+          好久没有更新了。本文我们将证明如下的公式 F3a​=1+i=0∑a−1​(3i2i+a−1​)(−1)a−i−18iF3a+1​=1+2i=0∑a−1​(3i+12i+a​)(−1)a−i−18iF3a+2​=1+4i=0∑a−1​(3i+22i+a+1​)(−1)a−i−18i 其中要求 a&gt;0，不过考虑到 Fibonacci 数的初值，后两个公式中 a 可以取 0。  这个公式和高纳德还
         </div>
       </a>
 
@@ -541,7 +541,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/08/193f1288.html" target="_blank">
         <div>
-          1. 问题 当系数矩阵进一步特殊化为三对角矩阵时，存在一种更方便的处理方法。考虑 [b1c1a2b2c2⋱⋱⋱an−1bn−1cn−1anbn][x1x2⋮xn−1xn]=[f1f2⋮fn−1fn]\begin{bmatrix} b_1 &amp; c_1 &amp; &amp; &amp; \\ a_2 &amp; b_2 &amp; c_2 &amp; &amp; \\ &amp; \ddot
+          1. 问题 当系数矩阵进一步特殊化为三对角矩阵时，存在一种更方便的处理方法。考虑 ​b1​a2​​c1​b2​⋱​c2​⋱an−1​​⋱bn−1​an​​cn−1​bn​​​​x1​x2​⋮xn−1​xn​​​=​f1​f2​⋮fn−1​fn​​​ 不知道为什么这个矩阵渲染出来的样子不好看。这固然可以采用 LU 分解，但是由于矩阵元素中充斥着大量的零，其可以算作稀疏矩阵，完全可以考虑只利用非零元。
         </div>
       </a>
 
@@ -581,7 +581,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/06/2f26c440.html" target="_blank">
         <div>
-          1. 问题 最初来自一名法国陆军测绘局的炮兵司令官、大地测量学家和数学家 André-Louis Cholesky，他遇到了一些超定方程组 {a1x1+a2x2+⋯+anxn+K1=0b1x1+b2x2+⋯+bnxn+K2=0⋮l1x1+l2x2+⋯+lnxn+Kp=0\begin{cases} a_1 x_1 + a_2 x_2 + \dots + a_n x_n + K_1 = 0 \\ b_
+          1. 问题 最初来自一名法国陆军测绘局的炮兵司令官、大地测量学家和数学家 André-Louis Cholesky，他遇到了一些超定方程组 ⎩⎨⎧​a1​x1​+a2​x2​+⋯+an​xn​+K1​=0b1​x1​+b2​x2​+⋯+bn​xn​+K2​=0⋮l1​x1​+l2​x2​+⋯+ln​xn​+Kp​=0​ 其中 n&gt;p，并且带有附加条件 F=x12​+x22​+⋯+xn2​ 取
         </div>
       </a>
 
@@ -621,7 +621,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/05/03/a91e162.html" target="_blank">
         <div>
-          1. 问题 在 Gauss 消去法中，我们先将系数矩阵与常数矩阵合并为增广矩阵处理。然而这不是必须的，完全可以分开处理，这样在 AAA 不变而 bbb 不断变化时，仅仅需要对 bbb 做处理。也就是说，我们期望能够获得一个矩阵 MMM 使得 MA=UMA = U MA=U 其中 UUU 为 Gauss 消去法得到的上三角矩阵。那么 Ax=B  ⟹  MAx=Ux=MbAx = B \implies
+          1. 问题 在 Gauss 消去法中，我们先将系数矩阵与常数矩阵合并为增广矩阵处理。然而这不是必须的，完全可以分开处理，这样在 A 不变而 b 不断变化时，仅仅需要对 b 做处理。也就是说，我们期望能够获得一个矩阵 M 使得 MA=U 其中 U 为 Gauss 消去法得到的上三角矩阵。那么 Ax=B⟹MAx=Ux=Mb 回忆在 Gauss 消去法中，我们记录了一个 P 矩阵，他的作用为使得 PA
         </div>
       </a>
 

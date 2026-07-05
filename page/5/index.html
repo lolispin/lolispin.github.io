@@ -261,7 +261,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/17/eac521f.html" target="_blank">
         <div>
-          Vandermonde Method 1. 数学原理 给定 n+1n+1n+1 个互不相同的插值节点： (x0,y0),(x1,y1),…,(xn,yn)(x_0, y_0), (x_1, y_1), \dots, (x_n, y_n) (x0​,y0​),(x1​,y1​),…,(xn​,yn​) 我们的目标是寻找一个次数不超过 nnn 的多项式 Pn(x)P_n(x)Pn​(x)： Pn(x)
+          Vandermonde Method 1. 数学原理 给定 n+1 个互不相同的插值节点： (x0​,y0​),(x1​,y1​),…,(xn​,yn​) 我们的目标是寻找一个次数不超过 n 的多项式 Pn​(x)： Pn​(x)=a0​+a1​x+a2​x2+⋯+an​xn 使其满足插值条件： Pn​(xi​)=yi​,i=0,1,…,n 将这 n+1 个点分别代入多项式方程，可以得到如下线性方
         </div>
       </a>
 
@@ -301,7 +301,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/17/a69a2931.html" target="_blank">
         <div>
-          割线法 1. 数学原理 割线法的核心思想是用**割线（Secant Line）**代替曲线。  牛顿法使用曲线在一点处的切线与 xxx 轴的交点来逼近零点。 割线法则在曲线上选取两个点，作一条穿过这两点的直线（割线），利用该直线与 xxx 轴的交点作为下一个近似根。  假设我们有两个初始近似点 xk−1x_{k-1}xk−1​ 和 xkx_kxk​，它们在曲线上对应的点为： Pk−1(xk−1,f
+          割线法 1. 数学原理 割线法的核心思想是用**割线（Secant Line）**代替曲线。  牛顿法使用曲线在一点处的切线与 x 轴的交点来逼近零点。 割线法则在曲线上选取两个点，作一条穿过这两点的直线（割线），利用该直线与 x 轴的交点作为下一个近似根。  假设我们有两个初始近似点 xk−1​ 和 xk​，它们在曲线上对应的点为： Pk−1​(xk−1​,f(xk−1​))和Pk​(xk​,f
         </div>
       </a>
 
@@ -341,7 +341,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/16/d13e3804.html" target="_blank">
         <div>
-          牛顿-拉夫逊法 (Newton-Raphson Method) 1. 数学原理 牛顿法（Newton’s Method）的核心思想是线性化。通过在当前迭代点 xkx_kxk​ 处对函数 f(x)f(x)f(x) 进行一阶泰勒展开，利用切线斜率来预测零点位置。 其迭代公式推导如下： f(x)≈f(xk)+f′(xk)(x−xk)f(x) \approx f(x_k) + f&#x27;(x_k)(x
+          牛顿-拉夫逊法 (Newton-Raphson Method) 1. 数学原理 牛顿法（Newton’s Method）的核心思想是线性化。通过在当前迭代点 xk​ 处对函数 f(x) 进行一阶泰勒展开，利用切线斜率来预测零点位置。 其迭代公式推导如下： f(x)≈f(xk​)+f′(xk​)(x−xk​) 令近似等式右侧为 0，解出 xk+1​： xk+1​=xk​−f′(xk​)f(xk​)​
         </div>
       </a>
 
@@ -381,7 +381,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/15/ac7e46a7.html" target="_blank">
         <div>
-          不动点迭代 (Fixed Point Iteration) 1. 算法背景 不动点迭代是非线性方程求解中的“母体”算法。它的核心思想极度纯粹：将方程 f(x)=0f(x) = 0f(x)=0 改写为等价的形式 x=g(x)x = g(x)x=g(x)。如果一个值 x∗x^*x∗ 满足 g(x∗)=x∗g(x^*) = x^*g(x∗)=x∗，则称 x∗x^*x∗ 为函数 ggg 的一个不动点。 在
+          不动点迭代 (Fixed Point Iteration) 1. 算法背景 不动点迭代是非线性方程求解中的“母体”算法。它的核心思想极度纯粹：将方程 f(x)=0 改写为等价的形式 x=g(x)。如果一个值 x∗ 满足 g(x∗)=x∗，则称 x∗ 为函数 g 的一个不动点。 在计算过程中，我们通过不断执行 xk+1​=g(xk​)，试图产生一个收敛到不动点的序列。  2. 数学原理 2.1 转化
         </div>
       </a>
 
@@ -421,7 +421,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/15/31295693.html" target="_blank">
         <div>
-          试位法 (Method of False Position) 1. 为什么需要试位法？ 二分法虽然稳健，但它完全不考虑函数的形状，每次都机械地取区间中点。 如果我们发现 f(a)f(a)f(a) 的绝对值非常小，而 f(b)f(b)f(b) 的绝对值非常大，直观上根应该离 aaa 更近一些。试位法（Regula Falsi） 正是利用了这种信息：它不再取中点，而是利用两端点连线的割线与 xxx 轴
+          试位法 (Method of False Position) 1. 为什么需要试位法？ 二分法虽然稳健，但它完全不考虑函数的形状，每次都机械地取区间中点。 如果我们发现 f(a) 的绝对值非常小，而 f(b) 的绝对值非常大，直观上根应该离 a 更近一些。试位法（Regula Falsi） 正是利用了这种信息：它不再取中点，而是利用两端点连线的割线与 x 轴的交点作为下一个探测点。  2. 数学原
         </div>
       </a>
 
@@ -461,7 +461,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/14/649c2087.html" target="_blank">
         <div>
-          二分法 1. 迭代原理 基于介值定理：若 f(a)⋅f(b)&lt;0f(a) \cdot f(b) &lt; 0f(a)⋅f(b)&lt;0，则区间 [a,b][a, b][a,b] 内至少存在一个根。其核心步骤如下：  计算中点 ccc：  c=a+b2c = \frac{a + b}{2} c=2a+b​   判断符号：  若 f(a)⋅f(c)&lt;0f(a) \cdot f(c) &l
+          二分法 1. 迭代原理 基于介值定理：若 f(a)⋅f(b)&lt;0，则区间 [a,b] 内至少存在一个根。其核心步骤如下：  计算中点 c：  c=2a+b​   判断符号：  若 f(a)⋅f(c)&lt;0，说明根在左半部分，更新 b=c； 否则，根在右半部分，更新 a=c。    收敛准则：  区间长度足够小：2∣b−a∣​&lt;tol。 或者中点函数值刚好为 0：∣f(c)∣&lt;
         </div>
       </a>
 
@@ -501,7 +501,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/14/352bb6cf.html" target="_blank">
         <div>
-          本文总结于 M. L. Glasser 的论文 A remarkable Definite Integral。作者对于一个已知的含参量的积分使用 Laplace 变换，得到了一个积分结果，剩下的事情便是带入具体函数了。譬如对于 a&gt;0a &gt; 0a&gt;0 以及 b&gt;0b &gt; 0b&gt;0，有 ∫0∞(x2+b)cosh⁡x(x4+(2b+π2)x2+b2)(1+2a2c
+          本文总结于 M. L. Glasser 的论文 A remarkable Definite Integral。作者对于一个已知的含参量的积分使用 Laplace 变换，得到了一个积分结果，剩下的事情便是带入具体函数了。譬如对于 a&gt;0 以及 b&gt;0，有 ∫0∞​(x4+(2b+π2)x2+b2)(1+2a2cosh2x+a4)(x2+b)coshx​dx=4a(1+a2)(b+4π2​
         </div>
       </a>
 
@@ -541,7 +541,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/13/a0113f57.html" target="_blank">
         <div>
-          预处理共轭梯度法 (PCG) 1. 为什么需要 PCG？ 在之前的博客中，我们聊到了 共轭梯度法 (CG)。虽然 CG 在对称正定矩阵下表现优异，但它有一个致命的弱点：收敛速度极度依赖于矩阵 A 的条件数。 当矩阵非常“病态”（条件数巨大）时，能量函数的“碗”会变得极其瘦长，标准 CG 的搜索效率会显著下降。预处理共轭梯度法 (PCG) 的核心思想是：寻找一个简单的预处理矩阵 MMM，通过坐标变换
+          预处理共轭梯度法 (PCG) 1. 为什么需要 PCG？ 在之前的博客中，我们聊到了 共轭梯度法 (CG)。虽然 CG 在对称正定矩阵下表现优异，但它有一个致命的弱点：收敛速度极度依赖于矩阵 A 的条件数。 当矩阵非常“病态”（条件数巨大）时，能量函数的“碗”会变得极其瘦长，标准 CG 的搜索效率会显著下降。预处理共轭梯度法 (PCG) 的核心思想是：寻找一个简单的预处理矩阵 M，通过坐标变换把瘦
         </div>
       </a>
 
@@ -581,7 +581,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/13/7235da0a.html" target="_blank">
         <div>
-          共轭梯度法 (CG) 1. 为什么需要共轭梯度法？ 在求解大型线性方程组 Ax=bAx = bAx=b（其中 AAA 为对称正定矩阵）时，最速下降法 (Steepest Descent) 往往因为“锯齿现象”导致收敛极慢。为了克服这一缺陷，共轭梯度法 (Conjugate Gradient, CG) 应运而生。 其核心思想是：不走回头路。每一次搜索的方向 ddd 都关于 AAA 矩阵保持“共轭”，
+          共轭梯度法 (CG) 1. 为什么需要共轭梯度法？ 在求解大型线性方程组 Ax=b（其中 A 为对称正定矩阵）时，最速下降法 (Steepest Descent) 往往因为“锯齿现象”导致收敛极慢。为了克服这一缺陷，共轭梯度法 (Conjugate Gradient, CG) 应运而生。 其核心思想是：不走回头路。每一次搜索的方向 d 都关于 A 矩阵保持“共轭”，理论上 n 维问题只需 n 步即
         </div>
       </a>
 
@@ -621,7 +621,7 @@
       
       <a class="index-excerpt index-excerpt__noimg" href="/posts/2026/04/09/fce72ee9.html" target="_blank">
         <div>
-          最速下降法 一、 数学原理与算法流程 最速下降法本质上是一种无约束优化算法，但在数值代数中，我们常利用它来求解线性方程组 Ax=bAx = bAx=b。其核心前提是矩阵 AAA 必须是对称正定矩阵 (SPD)。 1. 从方程组到能量函数 求解 Ax=bAx = bAx=b 等价于寻找二次函数（能量函数）的极小值点： f(x)=12xTAx−bTxf(x) = \frac{1}{2} x^T Ax
+          最速下降法 一、 数学原理与算法流程 最速下降法本质上是一种无约束优化算法，但在数值代数中，我们常利用它来求解线性方程组 Ax=b。其核心前提是矩阵 A 必须是对称正定矩阵 (SPD)。 1. 从方程组到能量函数 求解 Ax=b 等价于寻找二次函数（能量函数）的极小值点： f(x)=21​xTAx−bTx 由于 A 正定，该函数的图像是一个开口向上的“碗”，其最低点处的梯度 ∇f(x)=Ax−b
         </div>
       </a>
 
