@@ -1,0 +1,1144 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="lolispin">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="一开始的接触 当我还在本科院校读书时，经常光顾图书馆。第一次看到《函数构造论》时，以为是高考数学导数答题那种构造函数的方法。实际上，在我高三的时候，也就是 21 年，市面上就已经出现了所谓的“同构法”解导数题。 翻开书页后，发现和我想象的不一样。我早已记不清是何时第一次打开，作何反应。虽然和我想象的不一样，但有时看到了还回去翻一翻，感受下其中的数学公式。 再接触 读研的时候，对于数学知识探索的欲望">
+<meta property="og:type" content="article">
+<meta property="og:title" content="函数构造论笔记">
+<meta property="og:url" content="https://lolispin.github.io/posts/2026/09/05/3d7d34ac.html">
+<meta property="og:site_name" content="lolispin">
+<meta property="og:description" content="一开始的接触 当我还在本科院校读书时，经常光顾图书馆。第一次看到《函数构造论》时，以为是高考数学导数答题那种构造函数的方法。实际上，在我高三的时候，也就是 21 年，市面上就已经出现了所谓的“同构法”解导数题。 翻开书页后，发现和我想象的不一样。我早已记不清是何时第一次打开，作何反应。虽然和我想象的不一样，但有时看到了还回去翻一翻，感受下其中的数学公式。 再接触 读研的时候，对于数学知识探索的欲望">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-09-05T13:48:48.000Z">
+<meta property="article:modified_time" content="2026-09-05T14:05:14.940Z">
+<meta property="article:author" content="lolispin">
+<meta property="article:tag" content="读书笔记">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
+  
+  <title>函数构造论笔记 - lolispin</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/KaTeX/0.16.2/katex.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"lolispin.github.io","root":"/","version":"1.9.8","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 100vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>lolispin</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/" target="_self">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/" target="_self">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/books/" target="_self">
+                <i class="iconfont icon-book"></i>
+                <span>看书</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/" target="_self">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/" target="_self">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/" target="_self">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/slogan/" target="_self">
+                <i class="iconfont icon-pen"></i>
+                <span>独白</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/wenzhang.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="函数构造论笔记"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-09-05 21:48" pubdate>
+          2026年9月5日 晚上
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          1.8k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          15 分钟
+        
+      </span>
+    
+
+    
+    
+      
+        <span id="busuanzi_container_page_pv" style="display: none">
+          <i class="iconfont icon-eye" aria-hidden="true"></i>
+          <span id="busuanzi_value_page_pv"></span> 次
+        </span>
+        
+
+      
+    
+  </div>
+
+
+        
+      </div>
+
+      
+        <div class="scroll-down-bar">
+          <i class="iconfont icon-arrowdown"></i>
+        </div>
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <h1 id="seo-header">函数构造论笔记</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="一开始的接触">一开始的接触</h2>
+<p>当我还在本科院校读书时，经常光顾图书馆。第一次看到《函数构造论》时，以为是高考数学导数答题那种构造函数的方法。实际上，在我高三的时候，也就是 21 年，市面上就已经出现了所谓的“同构法”解导数题。</p>
+<p>翻开书页后，发现和我想象的不一样。我早已记不清是何时第一次打开，作何反应。虽然和我想象的不一样，但有时看到了还回去翻一翻，感受下其中的数学公式。</p>
+<h2 id="再接触">再接触</h2>
+<p>读研的时候，对于数学知识探索的欲望，明显降低了很多。去图书馆往往是写作业、复习，而很少学习新的知识。好不容易看一本有趣的小册子，不过几个月过去，我已经忘记了其中的内容，看到一半被别人借走了。在 6 月份期末周的时候，偶然间去图书馆，又看到了它。自然，也不是第一次在研究生生活中看到，只是那次闲来无事，恰好看到了书中最后证明的恒等式</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><msup><mrow><mi>cos</mi><mo>⁡</mo></mrow><mrow><mn>2</mn><mi>n</mi></mrow></msup><mfrac><mi>t</mi><mn>2</mn></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mo stretchy="false">!</mo></mrow><mrow><mo stretchy="false">(</mo><mn>2</mn><mi>n</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mo stretchy="false">!</mo></mrow></mfrac><mrow><mo fence="true">[</mo><mn>1</mn><mo>+</mo><mn>2</mn><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">!</mo><msup><mo stretchy="false">)</mo><mn>2</mn></msup></mrow><mrow><mo stretchy="false">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo><mo stretchy="false">(</mo><mi>n</mi><mo>+</mo><mi>k</mi><mo stretchy="false">)</mo><mo stretchy="false">!</mo></mrow></mfrac><mi>cos</mi><mo>⁡</mo><mi>k</mi><mi>t</mi><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\cos^{2n} \frac{t}{2} = \frac{(2n-1)!!}{(2n)!!} \left[ 1 + 2 \sum_{k=1}^n \frac{(n!)^2}{(n-k)! (n+k)!} \cos kt \right]
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.9781em;vertical-align:-0.686em;"></span><span class="mop"><span class="mop">cos</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathnormal mtight">n</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.2921em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">2</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">t</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:3.0521em;vertical-align:-1.3021em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mclose">)!!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord">2</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">1</span><span class="mclose">)!!</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">[</span></span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3021em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.4911em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)!</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mclose">)!</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mclose">!</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.936em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mop">cos</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">t</span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size4">]</span></span></span></span></span></span></span></p>
+<p>这个公式我在 Advanced Trigonometry 中已经学习过了，但还是想看看作者的处理。鉴于这个定理位于全书最后，所以我翻阅了前面几面。我记得书上是有别人的一些笔记，这表明有人看过。我十分欣喜，因为时常会担心，一些书从来没人看，只是静静出版。书上一开始给了 Weierstrass 第一定理，我能看懂。随后又给出两个恒等式</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sum_{k=0}^n C_n^k x^k (1-x)^{n-k} = 1
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.9535em;vertical-align:-1.3021em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3021em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.453em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.6444em;"></span><span class="mord">1</span></span></span></span></span></p>
+<p>和</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mo stretchy="false">(</mo><mi>k</mi><mo>−</mo><mi>n</mi><mi>x</mi><msup><mo stretchy="false">)</mo><mn>2</mn></msup><msubsup><mi>C</mi><mi>n</mi><mi>k</mi></msubsup><msup><mi>x</mi><mi>k</mi></msup><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>x</mi><msup><mo stretchy="false">)</mo><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup><mo>=</mo><mi>n</mi><mi>x</mi><mo stretchy="false">(</mo><mn>1</mn><mo>−</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">\sum_{k=0}^n (k-nx)^2 C_n^k x^k (1-x)^{n-k} = nx(1-x)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.9535em;vertical-align:-1.3021em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3021em;"><span></span></span></span></span></span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.07153em;">C</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-2.453em;margin-left:-0.0715em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight">n</span></span></span><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span><span class="mord"><span class="mord mathnormal">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1491em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose"><span class="mclose">)</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8991em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span><span class="mbin mtight">−</span><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span></span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">n</span><span class="mord mathnormal">x</span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">x</span><span class="mclose">)</span></span></span></span></span></p>
+<p>一下子，我被吸引了。当时的我，已经会使用百炼提供的免费额度将 pdf 转换为 tex，于是花费一天时间，得到了一份粗糙的 tex 文件。自然，这远不是我的终点。</p>
+<h2 id="开始学习">开始学习</h2>
+<p>得到了相当粗糙的 tex，这样的话，后续写笔记，就能够直接复制，再次基础上修改，而不必完全从头开始。 6 月 25 日应该是我考完试的时间，后来我回家了。直到 7 月 2 日，应该是这一天，我得了重感冒。7 月 7 日，我做高铁去读研。大概一直到 7 月 20 日，才完全好了。</p>
+<p>因为才开学，所以时间充沛，于是又学了许多。7 月 25 日开始放高温假，一直到 8 月 16 日。这期间，因为在家，所以又学了许多。开学后，变得忙碌了。上个星期和这个星期，我都只有周六周末才有时间学习。</p>
+<p>今天早上起床，我也不记得是什么时候了。还剩下最后一章，索性不洗脸不刷牙也不吃饭，一直学。差不多到了下午一点半，因为要去医院，所以暂停了。大概四点回家，继续学习，一直到晚上 6 点 54 分，终于全部学完了。</p>
+<h2 id="AI-的帮助">AI 的帮助</h2>
+<p>除了一开始让 AI 进行了重排，在写完每一章的 tex 文件后，我还会让 AI 进行检查。一开始是 deepseek 搭配 claude，上个星期，在网友的帮助下，我开通了 gpt plus，又把文件送到了 gpt 处。我让 AI 检查其中的错误，包括错别字，事实错误等，每一章差不多有几十个。</p>
+<p>我没有让 AI 直接修改，而是让其按照行数列出，然后我手动修改。AI 当然也不是万能的，不仅仅是说有的错误未发现，也会把一些正确的内容当作是错的，尽管很少。</p>
+<h2 id="意外的收获">意外的收获</h2>
+<p>在学习这本书的过程中，我写了两个小笔记。</p>
+<p>第一个是我看到了书上的不等式</p>
+<p class="katex-block "><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mrow><mrow><mo fence="true">∣</mo><munderover><mo>∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mi>k</mi><mi>x</mi></mrow><mi>k</mi></mfrac><mo fence="true">∣</mo></mrow><mo>⩽</mo><mn>2</mn><msqrt><mi>π</mi></msqrt></mrow><annotation encoding="application/x-tex">\left| \sum_{k=1}^{n} \frac{\sin k x}{k} \right| \leqslant 2 \sqrt{\pi}
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0521em;vertical-align:-1.3021em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.75em;"><span class="pstrut" style="height:5em;"></span><span style="width:0.333em;height:3.000em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.000em" viewBox="0 0 333 3000"><path d="M145 15 v585 v1800 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-1800 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1800 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6514em;"><span style="top:-1.8479em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight" style="margin-right:0.03148em;">k</span><span class="mrel mtight">=</span><span class="mord mtight">1</span></span></span></span><span style="top:-3.05em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathnormal mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.3021em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3714em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03148em;">k</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mop">sin</span><span class="mspace" style="margin-right:0.1667em;"></span><span class="mord mathnormal" style="margin-right:0.03148em;">k</span><span class="mord mathnormal">x</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.75em;"><span style="top:-3.75em;"><span class="pstrut" style="height:5em;"></span><span style="width:0.333em;height:3.000em;"><svg xmlns="http://www.w3.org/2000/svg" width="0.333em" height="3.000em" viewBox="0 0 333 3000"><path d="M145 15 v585 v1800 v585 c2.667,10,9.667,15,21,15
+c10,0,16.667,-5,20,-15 v-585 v-1800 v-585 c-2.667,-10,-9.667,-15,-21,-15
+c-10,0,-16.667,5,-20,15z M188 15 H145 v585 v1800 v585 h43z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.25em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel amsrm">⩽</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.1908em;"></span><span class="mord">2</span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8492em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathnormal" style="margin-right:0.03588em;">π</span></span></span><span style="top:-2.8092em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg xmlns="http://www.w3.org/2000/svg" width="400em" height="1.08em" viewBox="0 0 400000 1080" preserveAspectRatio="xMinYMin slice"><path d="M95,702
+c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,-10,-9.5,-14
+c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54
+c44.2,-33.3,65.8,-50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10
+s173,378,173,378c0.7,0,35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429
+c69,-144,104.5,-217.7,106.5,-221
+l0 -0
+c5.3,-9.3,12,-14,20,-14
+H400000v40H845.2724
+s-225.272,467,-225.272,467s-235,486,-235,486c-2.7,4.7,-9,7,-19,7
+c-6,0,-10,-1,-12,-3s-194,-422,-194,-422s-65,47,-65,47z
+M834 80h400000v40h-400000z"/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.1908em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>想到这个问题我以前接触过，于是通过询问 AI，得到了参考文献，完全解决了最佳系数问题。</p>
+<p>第二个则是上个星期在学习解析函数时，一开始的定义怎么也看不懂，后来在 AI 的帮助下，逐渐理解，并且得到了一些感悟。</p>
+<h2 id="最后的话">最后的话</h2>
+<p>现在的研究生生活很苦闷，学业和生活上都有很多困难。但是，我依然可以去追寻一些能够让我情愿花费时间的事情。</p>
+<p>我并不清楚，在学习的过程中，我是否真的热爱，还是说，仅仅是因为不讨厌。</p>
+<h2 id="附录">附录</h2>
+<p>让 AI 根据 tex 文件做了一些统计</p>
+<h2 id="总览">总览</h2>
+<table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align:right">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TeX 正文章节文件</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>源码行数</td>
+<td style="text-align:right">9,563</td>
+</tr>
+<tr>
+<td>中文字数</td>
+<td style="text-align:right">42,024</td>
+</tr>
+<tr>
+<td>英文单词数</td>
+<td style="text-align:right">658</td>
+</tr>
+<tr>
+<td>数字词元数</td>
+<td style="text-align:right">368</td>
+</tr>
+<tr>
+<td>可读内容单位估算</td>
+<td style="text-align:right">43,050</td>
+</tr>
+<tr>
+<td>去空白 TeX 源码字符</td>
+<td style="text-align:right">246,657</td>
+</tr>
+<tr>
+<td>章</td>
+<td style="text-align:right">10</td>
+</tr>
+<tr>
+<td>节</td>
+<td style="text-align:right">42</td>
+</tr>
+<tr>
+<td><code>align</code> 环境</td>
+<td style="text-align:right">1,762</td>
+</tr>
+<tr>
+<td><code>align*</code> 环境</td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><code>align/align*</code> 公式行估算</td>
+<td style="text-align:right">1,914</td>
+</tr>
+<tr>
+<td>行内公式估算</td>
+<td style="text-align:right">3,125</td>
+</tr>
+<tr>
+<td>标签 <code>label</code></td>
+<td style="text-align:right">142</td>
+</tr>
+<tr>
+<td>交叉引用</td>
+<td style="text-align:right">183</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数学环境">数学环境</h2>
+<table>
+<thead>
+<tr>
+<th>环境</th>
+<th style="text-align:right">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>theorem</code></td>
+<td style="text-align:right">115</td>
+</tr>
+<tr>
+<td><code>definition</code></td>
+<td style="text-align:right">30</td>
+</tr>
+<tr>
+<td><code>lemma</code></td>
+<td style="text-align:right">42</td>
+</tr>
+<tr>
+<td><code>corollary</code></td>
+<td style="text-align:right">53</td>
+</tr>
+<tr>
+<td><code>myproof</code></td>
+<td style="text-align:right">133</td>
+</tr>
+</tbody>
+</table>
+<h3 id="其他环境">其他环境</h3>
+<table>
+<thead>
+<tr>
+<th>环境</th>
+<th style="text-align:right">数量</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>align</code></td>
+<td style="text-align:right">1,762</td>
+</tr>
+<tr>
+<td><code>dcases</code></td>
+<td style="text-align:right">31</td>
+</tr>
+<tr>
+<td><code>array</code></td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><code>equation</code></td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><code>vmatrix</code></td>
+<td style="text-align:right">3</td>
+</tr>
+<tr>
+<td><code>cases</code></td>
+<td style="text-align:right">2</td>
+</tr>
+<tr>
+<td><code>align*</code></td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><code>center</code></td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><code>figure</code></td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><code>multline</code></td>
+<td style="text-align:right">1</td>
+</tr>
+<tr>
+<td><code>tikzpicture</code></td>
+<td style="text-align:right">1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="各章统计">各章统计</h2>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>章名</th>
+<th style="text-align:right">行数</th>
+<th style="text-align:right">中文字数</th>
+<th style="text-align:right">align</th>
+<th style="text-align:right">定理</th>
+<th style="text-align:right">定义</th>
+<th style="text-align:right">引理</th>
+<th style="text-align:right">推论</th>
+<th style="text-align:right">证明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>chap1.tex</code></td>
+<td>Weierstrass定理</td>
+<td style="text-align:right">578</td>
+<td style="text-align:right">2,390</td>
+<td style="text-align:right">105</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">9</td>
+</tr>
+<tr>
+<td><code>chap2.tex</code></td>
+<td>最佳逼近代数多项式</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">1,487</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">8,648</span></td>
+<td style="text-align:right">261</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">25</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">6</span></td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">10</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td><code>chap3.tex</code></td>
+<td>最佳逼近三角多项式</td>
+<td style="text-align:right">699</td>
+<td style="text-align:right">4,397</td>
+<td style="text-align:right">111</td>
+<td style="text-align:right">15</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">7</td>
+<td style="text-align:right">13</td>
+</tr>
+<tr>
+<td><code>chap4.tex</code></td>
+<td>函数的结构性质对于函数的三角多项式逼近的阶的影响</td>
+<td style="text-align:right">794</td>
+<td style="text-align:right">3,291</td>
+<td style="text-align:right">145</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">15</span></td>
+<td style="text-align:right">13</td>
+</tr>
+<tr>
+<td><code>chap5.tex</code></td>
+<td>以函数的三角多项式最佳逼近的性态为基础的函数结构性质的特征</td>
+<td style="text-align:right">1,359</td>
+<td style="text-align:right">6,309</td>
+<td style="text-align:right">261</td>
+<td style="text-align:right">14</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">11</span></td>
+<td style="text-align:right">2</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">20</span></td>
+</tr>
+<tr>
+<td><code>chap6.tex</code></td>
+<td>函数的结构性质与函数的代数多项式逼近之间的关系</td>
+<td style="text-align:right">984</td>
+<td style="text-align:right">3,095</td>
+<td style="text-align:right">188</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td><code>chap7.tex</code></td>
+<td>作为逼近工具的Fourier级数</td>
+<td style="text-align:right">545</td>
+<td style="text-align:right">2,582</td>
+<td style="text-align:right">94</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">8</td>
+</tr>
+<tr>
+<td><code>chap8.tex</code></td>
+<td>Fejer和与Vallee Poussin和</td>
+<td style="text-align:right">697</td>
+<td style="text-align:right">2,383</td>
+<td style="text-align:right">137</td>
+<td style="text-align:right">8</td>
+<td style="text-align:right">4</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td><code>chap9.tex</code></td>
+<td>解析函数的最佳逼近</td>
+<td style="text-align:right">977</td>
+<td style="text-align:right">4,770</td>
+<td style="text-align:right">183</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">7</td>
+</tr>
+<tr>
+<td><code>chap10.tex</code></td>
+<td>某些解析逼近工具的性质</td>
+<td style="text-align:right">1,443</td>
+<td style="text-align:right">4,159</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">277</span></td>
+<td style="text-align:right">17</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">6</td>
+<td style="text-align:right">19</td>
+</tr>
+</tbody>
+</table>
+<h2 id="各章在主-PDF-中的页数">各章在主 PDF 中的页数</h2>
+<table>
+<thead>
+<tr>
+<th>章</th>
+<th style="text-align:right">PDF 页码</th>
+<th style="text-align:right">页数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Weierstrass定理</td>
+<td style="text-align:right">3–17</td>
+<td style="text-align:right">15</td>
+</tr>
+<tr>
+<td>最佳逼近代数多项式</td>
+<td style="text-align:right">18–53</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">36</span></td>
+</tr>
+<tr>
+<td>最佳逼近三角多项式</td>
+<td style="text-align:right">54–70</td>
+<td style="text-align:right">17</td>
+</tr>
+<tr>
+<td>函数的结构性质对于函数的三角多项式逼近的阶的影响</td>
+<td style="text-align:right">71–89</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td>以函数的三角多项式最佳逼近的性态为基础的函数结构性质的特征</td>
+<td style="text-align:right">90–121</td>
+<td style="text-align:right">32</td>
+</tr>
+<tr>
+<td>函数的结构性质与函数的代数多项式逼近之间的关系</td>
+<td style="text-align:right">122–143</td>
+<td style="text-align:right">22</td>
+</tr>
+<tr>
+<td>作为逼近工具的Fourier级数</td>
+<td style="text-align:right">144–155</td>
+<td style="text-align:right">12</td>
+</tr>
+<tr>
+<td>Fejer和与Vallee Poussin和</td>
+<td style="text-align:right">156–171</td>
+<td style="text-align:right">16</td>
+</tr>
+<tr>
+<td>解析函数的最佳逼近</td>
+<td style="text-align:right">172–194</td>
+<td style="text-align:right">23</td>
+</tr>
+<tr>
+<td>某些解析逼近工具的性质</td>
+<td style="text-align:right">195–228</td>
+<td style="text-align:right">34</td>
+</tr>
+</tbody>
+</table>
+<h3 id="过程笔记明细">过程笔记明细</h3>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th style="text-align:center">格式</th>
+<th style="text-align:right">行数</th>
+<th style="text-align:right">中文字数</th>
+<th style="text-align:right">显示公式块</th>
+<th style="text-align:right">行内公式</th>
+<th style="text-align:right">align</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Gibbs-Wilbraham Phenomenon\笔记.tex</code></td>
+<td style="text-align:center">TeX</td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">747</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">2,098</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">105</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">137</span></td>
+<td style="text-align:right"><span style="color:red;font-weight:bold">105</span></td>
+</tr>
+<tr>
+<td><code>两个例子引发的思考\两个例子引发的思考.md</code></td>
+<td style="text-align:center">Markdown</td>
+<td style="text-align:right">45</td>
+<td style="text-align:right">855</td>
+<td style="text-align:right">9</td>
+<td style="text-align:right">59</td>
+<td style="text-align:right">0</td>
+</tr>
+</tbody>
+</table>
+<p>最后，附上所有的 pdf 笔记。至于 tex 源码，就不放了，我不想去折腾。如果有需要，可以联系我。</p>
+<iframe src="/file/函数构造论笔记.pdf"
+        width="100%"
+        height="700px"
+        style="border:none;">
+</iframe>
+<iframe src="/file/Gibbs-Wilbraham现象笔记.pdf"
+        width="100%"
+        height="700px"
+        style="border:none;">
+</iframe>
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" class="print-no-link">#读书笔记</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>函数构造论笔记</div>
+      <div>https://lolispin.github.io/posts/2026/09/05/3d7d34ac.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>lolispin</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年9月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a class="print-no-link" target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-cc-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/posts/2026/08/29/956ae413.html" title="两个例子引发的思考">
+                        <span class="hidden-mobile">两个例子引发的思考</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+    <div class="statistics">
+  
+  
+
+  
+    
+      <span id="busuanzi_container_site_pv" style="display: none">
+        总访问量 
+        <span id="busuanzi_value_site_pv"></span>
+         次
+      </span>
+    
+    
+      <span id="busuanzi_container_site_uv" style="display: none">
+        总访客数 
+        <span id="busuanzi_value_site_uv"></span>
+         人
+      </span>
+    
+    
+
+  
+
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.20.1/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/5.0.0/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+  <script defer src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
